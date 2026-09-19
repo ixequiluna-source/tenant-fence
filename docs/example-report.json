@@ -1,0 +1,462 @@
+[
+  {
+    "experiment": "broken-object",
+    "verdict": "FAIL",
+    "summary": "At least one configured boundary was violated.",
+    "checks": [
+      {
+        "check": 1,
+        "kind": "own-record control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 2,
+        "kind": "anonymous detail",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 3,
+        "kind": "own collection control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 4,
+        "kind": "foreign record",
+        "status": 200,
+        "verdict": "FAIL",
+        "reason": "Foreign synthetic marker appeared in the response."
+      },
+      {
+        "check": 5,
+        "kind": "forged tenant header",
+        "status": 200,
+        "verdict": "FAIL",
+        "reason": "Foreign synthetic marker appeared in the response."
+      },
+      {
+        "check": 6,
+        "kind": "forged collection header",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 7,
+        "kind": "own-record control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 8,
+        "kind": "anonymous detail",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 9,
+        "kind": "own collection control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 10,
+        "kind": "foreign record",
+        "status": 200,
+        "verdict": "FAIL",
+        "reason": "Foreign synthetic marker appeared in the response."
+      },
+      {
+        "check": 11,
+        "kind": "forged tenant header",
+        "status": 200,
+        "verdict": "FAIL",
+        "reason": "Foreign synthetic marker appeared in the response."
+      },
+      {
+        "check": 12,
+        "kind": "forged collection header",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      }
+    ],
+    "scope": "Read-only detail and collection routes; synthetic loopback targets only. Not a complete authorization audit."
+  },
+  {
+    "experiment": "header-trust",
+    "verdict": "FAIL",
+    "summary": "At least one configured boundary was violated.",
+    "checks": [
+      {
+        "check": 1,
+        "kind": "own-record control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 2,
+        "kind": "anonymous detail",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 3,
+        "kind": "own collection control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 4,
+        "kind": "foreign record",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 5,
+        "kind": "forged tenant header",
+        "status": 200,
+        "verdict": "FAIL",
+        "reason": "Foreign synthetic marker appeared in the response."
+      },
+      {
+        "check": 6,
+        "kind": "forged collection header",
+        "status": 200,
+        "verdict": "FAIL",
+        "reason": "Foreign synthetic marker appeared in the response."
+      },
+      {
+        "check": 7,
+        "kind": "own-record control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 8,
+        "kind": "anonymous detail",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 9,
+        "kind": "own collection control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 10,
+        "kind": "foreign record",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 11,
+        "kind": "forged tenant header",
+        "status": 200,
+        "verdict": "FAIL",
+        "reason": "Foreign synthetic marker appeared in the response."
+      },
+      {
+        "check": 12,
+        "kind": "forged collection header",
+        "status": 200,
+        "verdict": "FAIL",
+        "reason": "Foreign synthetic marker appeared in the response."
+      }
+    ],
+    "scope": "Read-only detail and collection routes; synthetic loopback targets only. Not a complete authorization audit."
+  },
+  {
+    "experiment": "leaky-list",
+    "verdict": "FAIL",
+    "summary": "At least one configured boundary was violated.",
+    "checks": [
+      {
+        "check": 1,
+        "kind": "own-record control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 2,
+        "kind": "anonymous detail",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 3,
+        "kind": "own collection control",
+        "status": 200,
+        "verdict": "FAIL",
+        "reason": "Foreign synthetic marker appeared in the response."
+      },
+      {
+        "check": 4,
+        "kind": "foreign record",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 5,
+        "kind": "forged tenant header",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 6,
+        "kind": "forged collection header",
+        "status": 200,
+        "verdict": "FAIL",
+        "reason": "Foreign synthetic marker appeared in the response."
+      },
+      {
+        "check": 7,
+        "kind": "own-record control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 8,
+        "kind": "anonymous detail",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 9,
+        "kind": "own collection control",
+        "status": 200,
+        "verdict": "FAIL",
+        "reason": "Foreign synthetic marker appeared in the response."
+      },
+      {
+        "check": 10,
+        "kind": "foreign record",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 11,
+        "kind": "forged tenant header",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 12,
+        "kind": "forged collection header",
+        "status": 200,
+        "verdict": "FAIL",
+        "reason": "Foreign synthetic marker appeared in the response."
+      }
+    ],
+    "scope": "Read-only detail and collection routes; synthetic loopback targets only. Not a complete authorization audit."
+  },
+  {
+    "experiment": "secure",
+    "verdict": "PASS",
+    "summary": "Configured own-record controls and cross-tenant denials passed.",
+    "checks": [
+      {
+        "check": 1,
+        "kind": "own-record control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 2,
+        "kind": "anonymous detail",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 3,
+        "kind": "own collection control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 4,
+        "kind": "foreign record",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 5,
+        "kind": "forged tenant header",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 6,
+        "kind": "forged collection header",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 7,
+        "kind": "own-record control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 8,
+        "kind": "anonymous detail",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 9,
+        "kind": "own collection control",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      },
+      {
+        "check": 10,
+        "kind": "foreign record",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 11,
+        "kind": "forged tenant header",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 12,
+        "kind": "forged collection header",
+        "status": 200,
+        "verdict": "PASS",
+        "reason": "Own synthetic record is observable without foreign markers."
+      }
+    ],
+    "scope": "Read-only detail and collection routes; synthetic loopback targets only. Not a complete authorization audit."
+  },
+  {
+    "experiment": "denied",
+    "verdict": "INCONCLUSIVE",
+    "summary": "Positive controls or transport did not support a complete conclusion.",
+    "checks": [
+      {
+        "check": 1,
+        "kind": "own-record control",
+        "status": 403,
+        "verdict": "INCONCLUSIVE",
+        "reason": "Positive control did not expose the expected own record."
+      },
+      {
+        "check": 2,
+        "kind": "anonymous detail",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 3,
+        "kind": "own collection control",
+        "status": 403,
+        "verdict": "INCONCLUSIVE",
+        "reason": "Positive control did not expose the expected own record."
+      },
+      {
+        "check": 4,
+        "kind": "foreign record",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 5,
+        "kind": "forged tenant header",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 6,
+        "kind": "forged collection header",
+        "status": 403,
+        "verdict": "INCONCLUSIVE",
+        "reason": "Positive control did not expose the expected own record."
+      },
+      {
+        "check": 7,
+        "kind": "own-record control",
+        "status": 403,
+        "verdict": "INCONCLUSIVE",
+        "reason": "Positive control did not expose the expected own record."
+      },
+      {
+        "check": 8,
+        "kind": "anonymous detail",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 9,
+        "kind": "own collection control",
+        "status": 403,
+        "verdict": "INCONCLUSIVE",
+        "reason": "Positive control did not expose the expected own record."
+      },
+      {
+        "check": 10,
+        "kind": "foreign record",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 11,
+        "kind": "forged tenant header",
+        "status": 403,
+        "verdict": "PASS",
+        "reason": "Access denied without foreign markers."
+      },
+      {
+        "check": 12,
+        "kind": "forged collection header",
+        "status": 403,
+        "verdict": "INCONCLUSIVE",
+        "reason": "Positive control did not expose the expected own record."
+      }
+    ],
+    "scope": "Read-only detail and collection routes; synthetic loopback targets only. Not a complete authorization audit."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "tenants": [
+    {
+      "id": "alpha",
+      "resource": "record-alpha",
+      "marker": "SYNTHETIC-ALPHA-RECORD",
+      "token_env": "TENANT_ALPHA_TOKEN"
+    },
+    {
+      "id": "beta",
+      "resource": "record-beta",
+      "marker": "SYNTHETIC-BETA-RECORD",
+      "token_env": "TENANT_BETA_TOKEN"
+    }
+  ],
+  "detail": "/records/{id}",
+  "collection": "/records"
+}
